@@ -20,10 +20,10 @@ Takes an options object with URL. Returns a `transmit()` function which takes an
 
 ```js
 {
+  activityId: string,
   activityType: string, // e.g., 'commented', 'shared', 'liked', 'listened'
   subject: string,      // The id of the user responsible for the activity.
   object: string,       // The id of the object that the activity was performed on.
-  activityId: string,
   timestamp: date,      // Epoch time
   currentTime: date,    // What time is it on the client right now?
                         // Required to sync times between client and server.
