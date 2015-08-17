@@ -27,7 +27,7 @@ The activity object is the data that gets transfered over the wire to inform a c
   timestamp: dateTime,    // http://www.w3.org/TR/xmlschema-2/#dateTime e.g. 2015-12-11T12:34:56Z
   currentTime: dateTime,  // What time is it on the client right now?
                           // Required to sync times between client and server.
-  clientID: clientID      // The client on which the activity was performed.
+  clientID: clientID,     // The client on which the activity was performed.
   data: object            // An object with activity details. The structure of the data
                           // is determined by the activityType.
 }
@@ -40,8 +40,8 @@ The clientID refers to an object like this:
 
 ```js
 {
-  name: string          // The name of the software
-  version: string       // Software version
+  name: string,         // The name of the software
+  version: string,      // Software version
   host: string          // Browser, iOS, Android, Node, etc...
 }
 ```
