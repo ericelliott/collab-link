@@ -1,4 +1,4 @@
-# Collab Link SDK
+# Collab Link API
 
 Collab link is a realtime activity streamer for Clients and Node. Clients stay in sync with each other by reporting activities to an activity server, which processes activities and delivers notifications to subscribed clients.
 
