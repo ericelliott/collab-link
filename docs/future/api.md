@@ -9,6 +9,8 @@ Collab link is a realtime activity streamer for Clients and Node. Clients stay i
 
 Takes an options object with source URL and optional dispatch function. Returns an EventEmitter. Emits `activity` events.
 
+By default, `listener()` uses the EventSource API if it's available. You can override that behavior by passing in an `eventSource` option. Or pass a `null` `eventSource` value if you just want to trigger events manually by calling `EventEmitter.emit()` on the returned object.
+
 
 ### transmitter({ url }) => transmit(activity)
 
