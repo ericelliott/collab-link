@@ -5,11 +5,18 @@ Collab link is a realtime activity streamer for Clients and Node. Clients stay i
 
 ## Communication
 
-### listener({ url }) => EventEmitter
+### listener({ url }) => ActivityListener
 
-Takes an options object with source URL and optional dispatch function. Returns an EventEmitter. Emits `activity` events.
+Takes an options object with source URL and optional dispatch function. Returns an ActivityListener, which emits `activity` events.
 
 By default, `listener()` uses the [EventSource API](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events) if it's available. You can override that behavior by passing in an `eventSource` option. Or pass a `null` `eventSource` value if you just want to trigger events manually by calling `EventEmitter.emit()` on the returned object.
+
+#### ActivityListener Events
+
+The ActivityListener is a node EventListener. It emits the following events:
+
+* `connected`
+* `error`
 
 
 ### transmitter({ url }) => transmit(activity)
